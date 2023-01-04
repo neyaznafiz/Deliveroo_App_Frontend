@@ -1,6 +1,7 @@
 import { View, Text, SafeAreaView, Image, TextInput } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome"
 
 
 const HomeScreen = () => {
@@ -30,29 +31,36 @@ const HomeScreen = () => {
                 Deliver Now!
               </Text>
 
-              <Text className="font-bold text-xl">
+              <Text className="font-bold text-xl space-x-2">
                 Current Location
-               {/* down arrow icon */}
+                <FontAwesome name="angle-down" size={22} color="#00CCBB" />
               </Text>
             </View>
 
-            <View className="">
-             {/* user icon */}
+            <View className=" border-2 border-[#00CCBB] rounded-full">
+              {/* user icon */}
+              <Text className="text-[#00CCBB] px-2 py-1 ">N</Text>
             </View>
           </View>
         </View>
 
         {/* search */}
-        <View>
-          <View>
+        
+        <View className="flex flex-row space-x-2  items-center pb-2 mx-3">
+          <View className="flex-row flex-1 items-center bg-gray-200 space-x-2">
             {/* search icon */}
+            <FontAwesome name="search" size={20} color="gray" />
             <TextInput
               placeholder="Restaurants and cuisines"
-            keyboardType="default"
+              keyboardType="default"
+              className="p-1 w-[350px]"
             />
+
           </View>
 
-       {/* adjustment icon */}
+          {/* adjustment icon */}
+          <FontAwesome name="filter" size={20} color="#00CCBB" />
+
         </View>
       </Text>
     </SafeAreaView>
