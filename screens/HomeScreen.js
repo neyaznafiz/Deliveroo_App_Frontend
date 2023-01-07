@@ -9,7 +9,8 @@ import {
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome";
-import Categories from "../components/Categories";
+import Categories from "../components/Categories/Categories";
+import FeaturedRow from "../components/Featured/FeaturedRow";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -74,6 +75,23 @@ const HomeScreen = () => {
         {/* Category section */}
         <Categories />
         {/* Featured Rows section */}
+        <FeaturedRow
+          id="1"
+          title="Featured"
+          description="Paid placements from our partners"
+        />
+
+        <FeaturedRow
+          id="2"
+          title="Tasty Discount"
+          description="Everyone's been enjoying juicy discount!"
+        />
+
+        <FeaturedRow
+          id="3"
+          title="Offers near you"
+          description="Why not support your local restaurant tonight!"
+        />
       </ScrollView>
     </SafeAreaView>
   );

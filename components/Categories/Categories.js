@@ -23,11 +23,17 @@ const Categories = () => {
         title="Sushi"
       />
 
-      <CategoryCard imgUrl="https://i.ibb.co/pjFbv6J/ashian.png" title="Asian" />
+      <CategoryCard
+        imgUrl="https://i.ibb.co/pjFbv6J/ashian.png"
+        title="Asian"
+      />
 
       <CategoryCard imgUrl="https://i.ibb.co/mbCQyrW/thai.jpg" title="Thai" />
 
-      <CategoryCard imgUrl="https://i.ibb.co/pwGrfMD/Tuna-Steak.jpg" title="Tuna Steak" />
+      <CategoryCard
+        imgUrl="https://i.ibb.co/pwGrfMD/Tuna-Steak.jpg"
+        title="Tuna Steak"
+      />
     </ScrollView>
   );
 };
