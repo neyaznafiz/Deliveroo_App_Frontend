@@ -9,7 +9,7 @@ import {
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome";
-import Categories from "../components/categories";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -26,7 +26,7 @@ const HomeScreen = () => {
       <View className="flex flex-row pb-2  items-center mx-3 space-x-2">
         <Image
           source={{
-            uri: "https://links.papareact.com/wru",
+            uri: "https://i.ibb.co/grx7RMV/delivery-img.png",
           }}
           className="h-7 w-7 bg-gray-300 p-4 rounded-full"
         />
