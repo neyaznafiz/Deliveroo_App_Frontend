@@ -31,19 +31,7 @@ const FeaturedRow = ({ id, title, description }) => {
       >
         {/* restaurantCards */}
         {restaurant.map((rst) => (
-          <RestaurantCard
-            key={rst._id}
-            id={rst._id}
-            imgUrl={rst.imgUrl}
-            title={rst.title}
-            rating={rst.rating}
-            genre={rst.genre}
-            address={rst.address}
-            short_description={rst.hort_description}
-            dishes={rst.dishes}
-            long={rst.long}
-            lat={rst.lat}
-          />
+          <RestaurantCard key={rst._id} rst={rst} />
         ))}
       </ScrollView>
     </View>

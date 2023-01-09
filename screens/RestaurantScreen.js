@@ -6,18 +6,7 @@ import DishRow from "../components/Restaurant/DishRow";
 
 const RestaurantScreen = () => {
   const {
-    params: {
-      _id,
-      imgUrl,
-      title,
-      rating,
-      genre,
-      address,
-      short_description,
-      dishes,
-      long,
-      lat,
-    },
+    params: { rst },
   } = useRoute();
 
   const navigation = useNavigation();
@@ -32,7 +21,7 @@ const RestaurantScreen = () => {
       <View className="relative">
         <Image
           source={{
-            uri: imgUrl,
+            uri: rst.imgUrl,
           }}
           className="w-full h-60 bg-gray-400 p-4"
         />
@@ -48,13 +37,14 @@ const RestaurantScreen = () => {
       {/* info section */}
       <View className="bg-white">
         <View className="px-4 pt-4">
-          <Text className="text-2xl font-bold">{title}</Text>
+          <Text className="text-2xl font-bold">{rst.title}</Text>
 
           <View className="flex-row space-x-4 my-1">
             <View className="flex-row items-center space-x-1">
               <FontAwesome name="star" color="green" size={12} />
               <Text className="text-gray-500 text-xs">
-                <Text className="text-green-700">{rating}</Text> • {genre}
+                <Text className="text-green-700">{rst.rating}</Text> •{" "}
+                {rst.genre}
               </Text>
             </View>
 
@@ -65,11 +55,15 @@ const RestaurantScreen = () => {
                 size={14}
                 className="opacity-30"
               />
-              <Text className="text-xs text-gray-500">Nearby • {address}</Text>
+              <Text className="text-xs text-gray-500">
+                Nearby • {rst.address}
+              </Text>
             </View>
           </View>
 
-          <Text className="text-gray-500 mt-2 pb-4">{short_description}</Text>
+          <Text className="text-gray-500 mt-2 pb-4">
+            {rst.short_description}
+          </Text>
         </View>
 
         {/* question section */}
@@ -87,15 +81,8 @@ const RestaurantScreen = () => {
         <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
 
         {/* dish row */}
-        {dishes.map((dish) => (
-          <DishRow
-            key={dish._id}
-            id={dish._id}
-            name={dish.name}
-            description={dish.description}
-            price={dish.price}
-            image={dish.image}
-          />
+        {rst.dishes.map((dish) => (
+          <DishRow key={dish._id} dish={dish} />
         ))}
       </View>
     </ScrollView>

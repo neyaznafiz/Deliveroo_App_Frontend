@@ -1,67 +1,5 @@
 [
   {
-    "id": 1,
-    "imgUrl": "https://i.ibb.co/GRm9f0J/burger-king.jpg",
-    "title": "Burger King",
-    "rating": 4.5,
-    "genre": "Japanese",
-    "address": "123, Main St",
-    "short_description": "Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken.",
-    "dishes": [
-      {
-        "id": 1,
-        "name": "Chicken Sandwich",
-        "description": "Lightly breaded chicken topped with crisp lettuce and creamy mayonnaise on a sesame seed bun.",
-        "price": 4.54,
-        "image": "https://i.ibb.co/WPCM3V5/chicken-sandwitch.webp"
-      },
-      {
-        "id": 2,
-        "name": "Chicken Butterfly",
-        "description": "Two chicken breasts, joined by crispy flame-grilled skin. Infused with PERi-PERi and served in your choice of spice.",
-        "price": 10.89,
-        "image": "https://i.ibb.co/6m99gyN/Chicken-Butterfly.jpg"
-      }
-    ],
-    " long": 20,
-    "lat": 0
-  },
-  {
-    "id": 2,
-    "imgUrl": "https://i.ibb.co/5cMk6cn/mc-donald.webp",
-    "title": "McDonald",
-    "rating": 4.5,
-    "genre": "Japanese",
-    "address": "123, Main St",
-    "short_description": "Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken.",
-    "dishes": [
-      {
-        "id": 1,
-        "name": "Popcorn Rice Bowl",
-        "description": "This is the gravy-yard shift! Rice layered with spicy, exotic gravy & topped off with crispy popcorn chicken!",
-        "price": 2.4,
-        "image": "https://i.ibb.co/9cMmf0M/Popcorn-Rice-Bowl.jpg"
-      },
-      {
-        "id": 2,
-        "name": "Cinnamon Roll",
-        "description": " Cinnamon Roll at McDonald's is served warm and loaded with cinnamon layered between buttery, flaky pastry dough that is drizzled with a delicious cream cheese icing.",
-        "price": 2.09,
-        "image": "https://i.ibb.co/fv1sk3j/Cinnamon-Roll.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Wing Platter",
-        "description": "10 Chicken Wings with either 2 large or 4 regular sides. Great for two people.",
-        "price": 21.22,
-        "image": "https://i.ibb.co/b5RyFkG/Wing-Platter.jpg"
-      }
-    ],
-    "long": 20,
-    "lat": 0
-  },
-  {
-    "id": 3,
     "imgUrl": "https://i.ibb.co/dmS9mgq/nandos.jpg",
     "title": "Nandos",
     "rating": 4.5,
@@ -95,7 +33,65 @@
     "lat": 0
   },
   {
-    "id": 4,
+    "imgUrl": "https://i.ibb.co/5cMk6cn/mc-donald.webp",
+    "title": "McDonald",
+    "rating": 4.5,
+    "genre": "Japanese",
+    "address": "123, Main St",
+    "short_description": "Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken.",
+    "dishes": [
+      {
+        "id": 4,
+        "name": "Popcorn Rice Bowl",
+        "description": "This is the gravy-yard shift! Rice layered with spicy, exotic gravy & topped off with crispy popcorn chicken!",
+        "price": 2.4,
+        "image": "https://i.ibb.co/9cMmf0M/Popcorn-Rice-Bowl.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Cinnamon Roll",
+        "description": " Cinnamon Roll at McDonald's is served warm and loaded with cinnamon layered between buttery, flaky pastry dough that is drizzled with a delicious cream cheese icing.",
+        "price": 2.09,
+        "image": "https://i.ibb.co/fv1sk3j/Cinnamon-Roll.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Wing Platter",
+        "description": "10 Chicken Wings with either 2 large or 4 regular sides. Great for two people.",
+        "price": 21.22,
+        "image": "https://i.ibb.co/b5RyFkG/Wing-Platter.jpg"
+      }
+    ],
+    "long": 20,
+    "lat": 0
+  },
+  {
+    "imgUrl": "https://i.ibb.co/GRm9f0J/burger-king.jpg",
+    "title": "Burger King",
+    "rating": 4.5,
+    "genre": "Japanese",
+    "address": "123, Main St",
+    "short_description": "Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken.",
+    "dishes": [
+      {
+        "id": 7,
+        "name": "Chicken Sandwich",
+        "description": "Lightly breaded chicken topped with crisp lettuce and creamy mayonnaise on a sesame seed bun.",
+        "price": 4.54,
+        "image": "https://i.ibb.co/WPCM3V5/chicken-sandwitch.webp"
+      },
+      {
+        "id": 8,
+        "name": "Chicken Butterfly",
+        "description": "Two chicken breasts, joined by crispy flame-grilled skin. Infused with PERi-PERi and served in your choice of spice.",
+        "price": 10.89,
+        "image": "https://i.ibb.co/6m99gyN/Chicken-Butterfly.jpg"
+      }
+    ],
+    " long": 20,
+    "lat": 0
+  },
+  {
     "imgUrl": "https://i.ibb.co/rsDNnhn/kfc.webp",
     "title": "KFC",
     "rating": 4.5,
@@ -104,14 +100,14 @@
     "short_description": "Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken.",
     "dishes": [
       {
-        "id": 1,
+        "id": 9,
         "name": "Hot Wings Box",
         "description": "Enjoy 2 pcs Leg Piece, 4 pcs Hot Wings, 1 pc Bun and 1 Regular Fries only at Tk.399 in KFC Value Box! Everything you get altogether here!",
         "price": 3.99,
         "image": "https://i.ibb.co/Dbb7P44/hot-wings-box.jpg"
       },
       {
-        "id": 2,
+        "id": 10,
         "name": "Buddy Rice Combo",
         "description": "You and a buddy ready to have your fill? The Buddy Rice Combo is a perfect solution with 2 Popcorn Rice Bowlz & 8pcs Hot Wings.",
         "price": 6.99,
