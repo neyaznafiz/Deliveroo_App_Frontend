@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
-import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useNavigation } from "@react-navigation/native";
 
 const RestaurantCard = ({

@@ -1,9 +1,17 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FontAwesome from "../../node_modules/@expo/vector-icons/FontAwesome";
-import RestaurantCard from "../RestaurantCard";
+import RestaurantCard from "../Restaurant/RestaurantCard";
 
-const FeaturedRow = ({ title, description, featuredCategory }) => {
+const FeaturedRow = ({ id, title, description }) => {
+  const [restaurant, setRestaurant] = useState([]);
+
+  useEffect(() => {
+    fetch("https://deliveroo-appserver-production.up.railway.app/restaurant")
+      .then((res) => res.json())
+      .then((data) => setRestaurant(data));
+  }, []);
+
   return (
     <View>
       <View className="flex-row items-center justify-between mt-4 px-4">
@@ -22,57 +30,21 @@ const FeaturedRow = ({ title, description, featuredCategory }) => {
         className="pt-4"
       >
         {/* restaurantCards */}
-        <RestaurantCard
-          id={1}
-          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-          title="Yo!  |"
-          rating={4.5}
-          genre="Japanese"
-          address="123, Main St"
-          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-
-        <RestaurantCard
-          id={2}
-          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-          title="Yo! Sushi ||"
-          rating={4.5}
-          genre="Japanese"
-          address="123, Main St"
-          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-
-        <RestaurantCard
-          id={3}
-          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-          title="Yo! Sushi |||"
-          rating={4.5}
-          genre="Japanese"
-          address="123, Main St"
-          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-
-        <RestaurantCard
-          id={4}
-          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-          title="Yo! Sushi ||||"
-          rating={4.5}
-          genre="Japanese"
-          address="123, Main St"
-          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
+        {restaurant.map((rst) => (
+          <RestaurantCard
+            key={rst._id}
+            id={rst._id}
+            imgUrl={rst.imgUrl}
+            title={rst.title}
+            rating={rst.rating}
+            genre={rst.genre}
+            address={rst.address}
+            short_description={rst.hort_description}
+            dishes={rst.dishes}
+            long={rst.long}
+            lat={rst.lat}
+          />
+        ))}
       </ScrollView>
     </View>
   );
