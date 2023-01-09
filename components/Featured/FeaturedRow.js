@@ -29,7 +29,7 @@ const FeaturedRow = ({ title, description, featuredCategory }) => {
           rating={4.5}
           genre="Japanese"
           address="123, Main St"
-          short_description="This is Test description"
+          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
           dishes={[]}
           long={20}
           lat={0}
@@ -42,7 +42,7 @@ const FeaturedRow = ({ title, description, featuredCategory }) => {
           rating={4.5}
           genre="Japanese"
           address="123, Main St"
-          short_description="This is Test description"
+          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
           dishes={[]}
           long={20}
           lat={0}
@@ -55,7 +55,7 @@ const FeaturedRow = ({ title, description, featuredCategory }) => {
           rating={4.5}
           genre="Japanese"
           address="123, Main St"
-          short_description="This is Test description"
+          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
           dishes={[]}
           long={20}
           lat={0}
@@ -68,7 +68,7 @@ const FeaturedRow = ({ title, description, featuredCategory }) => {
           rating={4.5}
           genre="Japanese"
           address="123, Main St"
-          short_description="This is Test description"
+          short_description="Nando's is a South African muntinational fast casual chain that specialise in flame-grilled peri style chicken."
           dishes={[]}
           long={20}
           lat={0}
