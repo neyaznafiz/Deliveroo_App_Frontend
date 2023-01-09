@@ -23,55 +23,55 @@ const FeaturedRow = ({ title, description, featuredCategory }) => {
       >
         {/* restaurantCards */}
         <RestaurantCard
-        id={1}
-        imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-        title="Yo! Sushi"
-        rating={4.5}
-        genre="Japanese"
-        address="123, Main St"
-        short_description="This is Test description"
-        dishes={[]}
-        long={20}
-        lat={0}
+          id={1}
+          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
+          title="Yo!  |"
+          rating={4.5}
+          genre="Japanese"
+          address="123, Main St"
+          short_description="This is Test description"
+          dishes={[]}
+          long={20}
+          lat={0}
         />
 
-<RestaurantCard
-        id={1}
-        imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-        title="Yo! Sushi"
-        rating={4.5}
-        genre="Japanese"
-        address="123, Main St"
-        short_description="This is Test description"
-        dishes={[]}
-        long={20}
-        lat={0}
+        <RestaurantCard
+          id={2}
+          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
+          title="Yo! Sushi ||"
+          rating={4.5}
+          genre="Japanese"
+          address="123, Main St"
+          short_description="This is Test description"
+          dishes={[]}
+          long={20}
+          lat={0}
         />
 
-<RestaurantCard
-        id={1}
-        imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-        title="Yo! Sushi"
-        rating={4.5}
-        genre="Japanese"
-        address="123, Main St"
-        short_description="This is Test description"
-        dishes={[]}
-        long={20}
-        lat={0}
+        <RestaurantCard
+          id={3}
+          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
+          title="Yo! Sushi |||"
+          rating={4.5}
+          genre="Japanese"
+          address="123, Main St"
+          short_description="This is Test description"
+          dishes={[]}
+          long={20}
+          lat={0}
         />
 
-<RestaurantCard
-        id={1}
-        imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
-        title="Yo! Sushi"
-        rating={4.5}
-        genre="Japanese"
-        address="123, Main St"
-        short_description="This is Test description"
-        dishes={[]}
-        long={20}
-        lat={0}
+        <RestaurantCard
+          id={4}
+          imgUrl="https://i.ibb.co/cyLr2jx/sushi.webp"
+          title="Yo! Sushi ||||"
+          rating={4.5}
+          genre="Japanese"
+          address="123, Main St"
+          short_description="This is Test description"
+          dishes={[]}
+          long={20}
+          lat={0}
         />
       </ScrollView>
     </View>
