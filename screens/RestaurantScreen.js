@@ -3,12 +3,11 @@ import React, { useLayoutEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome";
 import DishRow from "../components/Restaurant/DishRow";
-// import dishes from "../DummyData";
 
 const RestaurantScreen = () => {
   const {
     params: {
-      id,
+      _id,
       imgUrl,
       title,
       rating,
@@ -20,8 +19,6 @@ const RestaurantScreen = () => {
       lat,
     },
   } = useRoute();
-
-  // const [dishes, setDishes] = useState([])
 
   const navigation = useNavigation();
   useLayoutEffect(() => {
@@ -90,14 +87,16 @@ const RestaurantScreen = () => {
         <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
 
         {/* dish row */}
-        {dishes.map((dish) => <DishRow
-            id={dish.id}
+        {dishes.map((dish) => (
+          <DishRow
+            key={dish._id}
+            id={dish._id}
             name={dish.name}
             description={dish.description}
             price={dish.price}
             image={dish.image}
           />
-        )}
+        ))}
       </View>
     </ScrollView>
   );
