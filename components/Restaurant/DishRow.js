@@ -25,8 +25,6 @@ const DishRow = ({ dish }) => {
     dispatch(removeFromBasket({ id: dish.id }));
   };
 
-  console.log(items);
-
   return (
     <>
       <TouchableOpacity
@@ -61,7 +59,7 @@ const DishRow = ({ dish }) => {
       {isPressed && (
         <View className="bg-white px-4 py-2 border-b border-gray-200">
           <View className="flex-row items-center gap-x-4">
-            <TouchableOpacity disabled={!items.length > 0} onPress={removeItemFromBasket} >
+            <TouchableOpacity disabled={!items.length} onPress={removeItemFromBasket} >
               <FontAwesome
                 name="minus-circle"
                 size={25}
