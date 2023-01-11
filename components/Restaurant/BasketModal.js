@@ -21,7 +21,9 @@ const BasketModal = () => {
           {items.length}
         </Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => {
+        navigation.navigate("Basket");
+      }}>
           <Text className="text-white text-lg font-extrabold tracking-wide">
             View Basket
           </Text>

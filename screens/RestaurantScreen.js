@@ -1,20 +1,40 @@
 import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome";
 import DishRow from "../components/Restaurant/DishRow";
 import BasketModal from "../components/Restaurant/BasketModal";
 import { selectBasketItems } from "../redux/features/basketSlice";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setRestaurant } from "../redux/features/restaurantSlice";
 
 const RestaurantScreen = () => {
+  const navigation = useNavigation();
+  const dispatch = useDispatch();
+
   const {
     params: { rst },
   } = useRoute();
 
+  useEffect(() => {
+    dispatch(
+      setRestaurant({
+        id: rst._id,
+        imgUrl: rst.imgUrl,
+        title: rst.title,
+        rating: rst.rating,
+        genre: rst.genre,
+        address: rst.address,
+        short_description: rst.short_description,
+        dishes: rst.dishes,
+        long: rst.long,
+        lat: rst.lat,
+      })
+    );
+  }, [dispatch]);
+
   const items = useSelector(selectBasketItems);
 
-  const navigation = useNavigation();
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
