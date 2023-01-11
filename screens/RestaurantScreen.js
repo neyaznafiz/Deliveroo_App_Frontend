@@ -71,7 +71,7 @@ const RestaurantScreen = () => {
               <View className="flex-row items-center space-x-1">
                 <FontAwesome name="star" color="green" size={12} />
                 <Text className="text-gray-500 text-xs">
-                  <Text className="text-green-700">{rst.rating}</Text> •{" "}
+                  <Text className="text-green-700">{rst.rating}</Text> • 
                   {rst.genre}
                 </Text>
               </View>
