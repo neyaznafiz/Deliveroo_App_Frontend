@@ -13,14 +13,17 @@ import { selectRestaurant } from "../redux/features/restaurantSlice";
 import {
   removeFromBasket,
   selectBasketItems,
+  selectBasketTotal,
 } from "../redux/features/basketSlice";
 import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome";
 import Currency from "react-currency-formatter";
+
 
 const BasketScreen = () => {
   const navigation = useNavigation();
   const restaurant = useSelector(selectRestaurant);
   const items = useSelector(selectBasketItems);
+  const basketTotal = useSelector(selectBasketTotal);
   const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
   const dispatch = useDispatch();
 
@@ -78,15 +81,20 @@ const BasketScreen = () => {
 
               <Text className="flex-1">{items[0]?.name}</Text>
 
-              <Text>
-                <Currency quantity={items[0]?.price} currency="USD" />
-              </Text>
+              <View className="flex-row w-36 items-center justify-between">
+                <Text>
+                  <Currency quantity={items[0]?.price} currency="USD" />
+                </Text>
 
-              <Text className="text-primary"> {items.length}X</Text>
+                <Text className="text-primary"> {items.length}X</Text>
 
-              <Text>
-                <Currency quantity={items[0]?.price * items.length} currency="USD" />
-              </Text>
+                <Text>
+                  <Currency
+                    quantity={items[0]?.price * items.length}
+                    currency="USD"
+                  />
+                </Text>
+              </View>
 
               <TouchableOpacity>
                 <Text
@@ -101,6 +109,30 @@ const BasketScreen = () => {
             </View>
           ))}
         </ScrollView>
+
+        {/* subtotal section */}
+        <View className="p-5 bg-white mt-5 space-y-4 shadow-lg">
+          <View className="flex-row justify-between">
+            <Text className="text-gray-400">Subtotal</Text>
+            <Text className="text-gray-400">
+              <Currency quantity={basketTotal} currency="USD" />
+            </Text>
+          </View>
+
+          <View className="flex-row justify-between">
+            <Text className="text-gray-400">Delivery Fee</Text>
+            <Text className="text-gray-400">
+              <Currency quantity={5.99} currency="USD" />
+            </Text>
+          </View>
+
+          <View className="flex-row justify-between">
+            <Text>Order Total</Text>
+            <Text className="font-extrabold">
+              <Currency quantity={basketTotal + 5.99} currency="USD" />
+            </Text>
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );

@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import BasketScreen from "./screens/BasketScreen";
 
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
