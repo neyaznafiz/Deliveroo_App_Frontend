@@ -38,10 +38,10 @@ const HomeScreen = () => {
               Deliver Now!
             </Text>
 
-            <Text className="font-bold text-xl space-x-2">
-              Current Location
+            <View className="flex-row items-center space-x-2">
+              <Text className="font-bold text-xl">Current Location</Text>
               <FontAwesome name="angle-down" size={22} color="#00CCBB" />
-            </Text>
+            </View>
           </View>
           {/* user icon */}
           <FontAwesome name="user" size={30} color="#00CCBB" />

@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  Linking,
 } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -69,16 +70,33 @@ const DeliveryScreen = () => {
         className="flex-1 -mt-10 z-0"
         mapType="mutedStandard"
       >
-              <Marker coordinate={{
-                  latitude: restaurant.lat,
-                  longitude: restaurant.long,
-              }}
-                  title={restaurant.title}
-                  description={restaurant.short_description}
-                  identifier="origin"
-                  pinColor="#00CCBB"
-              />
+        <Marker
+          coordinate={{
+            latitude: restaurant.lat,
+            longitude: restaurant.long,
+          }}
+          title={restaurant.title}
+          description={restaurant.short_description}
+          identifier="origin"
+          pinColor="#00CCBB"
+        />
       </MapView>
+
+      <SafeAreaView className="h-24 bg-white flex-row items-center space-x-5">
+        <Image
+          source={{ uri: "https://i.ibb.co/grx7RMV/delivery-img.png" }}
+          className="h-12 w-12 bg-gray-300 p-4 rounded-full ml-5"
+        />
+
+        <View className="flex-1">
+          <Text className="text-lg">Daniel Robert</Text>
+          <Text className="text-gray-400">Your Rideer</Text>
+        </View>
+
+        <Text
+          onPress={()=>Linking.openURL("tel:+16592410399")}
+          className="text-primary text-lg font-bold mr-5">Call</Text>
+      </SafeAreaView>
     </View>
   );
 };
