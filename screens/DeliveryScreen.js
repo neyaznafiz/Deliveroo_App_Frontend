@@ -11,13 +11,14 @@ import { selectRestaurant } from "../redux/features/restaurantSlice";
 import { useSelector } from "react-redux";
 import FontAwesome from "../node_modules/@expo/vector-icons/FontAwesome";
 import * as Progress from "react-native-progress";
+import MapView, { Marker } from "react-native-maps";
 
 const DeliveryScreen = () => {
   const navigation = useNavigation();
   const restaurant = useSelector(selectRestaurant);
 
   return (
-    <View className="bg-primary flex-1 py-6">
+    <View className="bg-primary flex-1 pt-6">
       <SafeAreaView className="z-50">
         <View className="flex-row items-center justify-between p-5">
           <TouchableOpacity
@@ -50,13 +51,34 @@ const DeliveryScreen = () => {
             width={225}
             indeterminate={true}
             color="#00CCBB"
-                  />
-                  
-                  <Text className="mt-3 text-gray-500">
-                      Your order at {restaurant.title} is being prepared
-                  </Text>
+          />
+
+          <Text className="mt-3 text-gray-500">
+            Your order at {restaurant.title} is being prepared
+          </Text>
         </View>
       </SafeAreaView>
+
+      <MapView
+        initialRegion={{
+          latitude: restaurant.lat,
+          longitude: restaurant.long,
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
+        }}
+        className="flex-1 -mt-10 z-0"
+        mapType="mutedStandard"
+      >
+              <Marker coordinate={{
+                  latitude: restaurant.lat,
+                  longitude: restaurant.long,
+              }}
+                  title={restaurant.title}
+                  description={restaurant.short_description}
+                  identifier="origin"
+                  pinColor="#00CCBB"
+              />
+      </MapView>
     </View>
   );
 };
