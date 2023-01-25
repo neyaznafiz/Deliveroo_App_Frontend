@@ -7,7 +7,7 @@ const FeaturedRow = ({ id, title, description }) => {
   const [restaurant, setRestaurant] = useState([]);
 
   useEffect(() => {
-    fetch("https://deliveroo-appserver-production.up.railway.app/restaurant")
+    fetch("https://deliverro-app-server.vercel.app/restaurant")
       .then((res) => res.json())
       .then((data) => setRestaurant(data));
   }, []);
